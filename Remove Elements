@@ -1,0 +1,14 @@
+class Solution(object):
+    def removeElement(self, nums, val):
+        # Initialize an index to keep track of the position for non-val elements
+        index = 0
+        # Loop through each element in the list
+        for i in nums:
+            # If the current element is not equal to val, we keep it
+            if i != val:
+                # Place the current element at the 'index' position
+                nums[index] = i
+                # Move the index to the next position
+                index += 1 
+        # Return the new length of the list after removing all occurrences of val
+        return index
